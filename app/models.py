@@ -59,8 +59,6 @@ class Comment(db.Model):
         comment=Comment.query.filter_by(pitch_id=pitch_id).all()
         return comment
 
-# date_time=datetime.utcnow().replace(tzinfo=pytz.UTC)
-# time_zone=date_time.astimezone(pytz.timezone('Africa/Nairobi'))
 
 class Pitch(db.Model):
     __tablename__='pitch'
