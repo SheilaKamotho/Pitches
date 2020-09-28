@@ -17,13 +17,12 @@
                 <li><a href="/interview"><strong>Interview Pitches</strong></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                {%if session.logged_in %}
-                  <li><a href="/logout"><strong>Log Out</strong></a></li>
-                {%else%}
-                  <li><a href="/register"><strong>Register</strong></a></li>
-                  <li><a href="/login"><strong>Log In</strong></a></li>
+                {% if current_user.is_authenticated %}
+                <li style="color:white;padding:15px;">{{current_user.username}}</li>
+                <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
+                {% else %}
+                <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
                 {%endif%}
-                
             </ul>
         </div>
     </div>
