@@ -7,7 +7,6 @@ class Config:
     # app.config.update
     #SECRET_KEY="powerful secretkey",
     SECRET_KEY='Flask WTF Secret Key'
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://sheila:kamo2211@localhost/pitch'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOADED_PHOTOS_DEST ='app/static/photos'
 
@@ -34,11 +33,11 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://sheila:kamo2211@localhost/pitch'
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
     
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://sheila:kamo2211@localhost/pitch_test'
     
 
 class DevConfig(Config):
