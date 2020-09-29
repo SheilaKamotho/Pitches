@@ -145,17 +145,4 @@ def posted(username):
 
     return render_template('posted_by.html',pitches=all_pitch,title=user.username,user=user,image=image)
 
-    vote=0
-def Upvote(pitch):
-    if pitch:
-        vote=0
-        vote=pitch+1
-
-    return vote
-
-def Downvote(pitch):
-    if pitch:
-        vote=0
-        vote=pitch+1
-
-    return vote
+   
