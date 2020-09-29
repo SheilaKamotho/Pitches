@@ -3,7 +3,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 from . import login_manager
 from datetime import datetime, timezone, time, timedelta,timezone
-import pytz
 
 
 @login_manager.user_loader
@@ -66,7 +65,4 @@ class Pitch(db.Model):
     pitch=db.Column(db.String())
     pitch_category=db.Column(db.String(20))
     posted=db.Column(db.DateTime,default=datetime.utcnow)
-    upvotes=db.Column(db.Integer)
-    downvotes=db.Column(db.Integer)
-    # comment=db.relationship('Comment',backref='user',lazy='dynamic')
     user_id=db.Column(db.Integer,db.ForeignKey('users.id'))
