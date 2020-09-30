@@ -8,7 +8,7 @@ This website makes use of Python, CSS and BootStrap.
 ## Setup Instructions
 The webpage can be opened on any browser ie chrome, mozilla firefox, google etc as long as the user has the live link shown below. The user can navigate to various sources by clicking on the links on the nav bar.
 ## Live link
-
+https://pitch111.herokuapp.com/
 ## Contact
 For any comments or contribution contact kamothosheila@gmail.com
 ## Bugs
