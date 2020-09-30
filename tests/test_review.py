@@ -1,5 +1,6 @@
-from app.models import Review,User
 from app import db
+from app.models import Review,User
+
 
 def setUp(self):
     self.user_nelly = User(username = 'sheila',password = 'potato', email = 'kamothosheila@gmail.com')
