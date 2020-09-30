@@ -2,7 +2,7 @@ from app.models import Review,User
 from app import db
 
 def setUp(self):
-    self.user_nelly = User(username = 'nelly',password = 'potato', email = 'nelly@gmail.com')
+    self.user_nelly = User(username = 'sheila',password = 'potato', email = 'kamothosheila@gmail.com')
     self.new_review = Review(pitch_id=12345,pitch_title='Review for pitches',image_path="https://image.tmdb.org/t/p/w500/jdjdjdjn",pitch_review='This pitch is the best thing since sliced bread',user = self.user_nelly )
 
 def tearDown(self):
